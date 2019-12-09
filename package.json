@@ -1,0 +1,29 @@
+{
+  "name": "react-native-tree-menu-simple",
+  "version": "1.0.0",
+  "description": "A demo component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrcwerfar/react-native-tree-menu-simple.git"
+  },
+  "keywords": [
+    "react-native",
+    "android",
+    "ios",
+    "menu",
+    "tree"
+  ],
+  "author": "Werner Farstad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrcwerfar/react-native-tree-menu-simple/issues"
+  },
+  "homepage": "https://github.com/mrcwerfar/react-native-tree-menu-simple#readme",
+  "devDependencies": {
+    "metro-react-native-babel-preset": "^0.57.0"
+  }
+}

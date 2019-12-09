@@ -1,0 +1,127 @@
+{
+  "openMenuItemIcon": "\u25C0",
+  "closeMenuItemIcon": "\u25BC",
+  "menu":
+  [
+    {
+      "id": "id_new_session",
+      "icon": "\u2795",
+      "name": "New Session",
+      "subItems": [
+        {
+          "id": "id_new_session_find_program",
+          "icon": "\u25AA",
+          "name": "Find program",
+          "subItems": []
+        },
+        {
+          "id": "id_new_session_select_program",
+          "icon": "\u25AA",
+          "name": "Select program",
+          "subItems": [
+            {
+              "id": "id_new_session_select_program1",
+              "icon": "\u25AA",
+              "name": "Bicycling",
+              "subItems": []
+            },
+            {
+              "id": "id_new_session_select_program2",
+              "icon": "\u25AA",
+              "name": "Body workout",
+              "subItems": []
+            },
+            {
+              "id": "id_new_session_select_program3",
+              "icon": "\u25AA",
+              "name": "Hiking",
+              "subItems": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "id_activity",
+      "icon": "\u26F9",
+      "name": "My activity",
+      "subItems": [
+        {
+          "id": "id_activity_find_program",
+          "icon": "\u25AA",
+          "name": "Find program to display",
+          "subItems": []
+        },
+        {
+          "id": "id_activity_select_program",
+          "icon": "\u25AA",
+          "name": "Select program",
+          "subItems": [
+            {
+              "id": "id_activity_select_program1",
+              "icon": "\u25AA",
+              "name": "Bicycling",
+              "subItems": []
+            },
+            {
+              "id": "id_activity_select_program2",
+              "icon": "\u25AA",
+              "name": "Body Workout",
+              "subItems": []
+            },
+            {
+              "id": "id_activity_select_program3",
+              "icon": "\u25AA",
+              "name": "Hiking",
+              "subItems": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "id_programs",
+      "icon": "\u2630",
+      "name": "Programs",
+      "subItems": [
+        {
+          "id": "id_programs_select_program1",
+          "icon": "\u25AA",
+          "name": "Bicycling",
+          "subItems": []
+        },
+        {
+          "id": "id_programs_select_program2",
+          "icon": "\u25AA",
+          "name": "Body workout",
+          "subItems": []
+        },
+        {
+          "id": "id_programs_select_program3",
+          "icon": "\u25AA",
+          "name": "Hiking",
+          "subItems": []
+        },
+        {
+          "id": "id_programs_add",
+          "icon": "\u25AA",
+          "name": "Add new program",
+          "subItems": []
+        }
+      ]
+    },
+    {
+      "id": "id_exercises",
+      "icon": "\u26BD",
+      "name": "Exercises",
+      "subItems": [
+        {
+          "id": "id_exercises_add",
+          "icon": "\u25AA",
+          "name": "Add new exercise",
+          "subItems": []
+        }
+      ]
+    }
+  ]
+}
