@@ -143,6 +143,7 @@ class TreeMenu extends Component {
 									reRender: !this.state.reRender,
 								});
 							}}
+							renderCustomMenuItem={(menuItemObject)=>this.props.renderCustomMenuItem(menuItemObject)}
 						/>
 						{
 							this.props.menuItemSettings.itemSeparator && this.renderSeparator()
@@ -259,14 +260,13 @@ TreeMenu.defaultProps = {
 };
 
 TreeMenu.propTypes = {
+	menuData: PropTypes.object.isRequired,
+	menuItemSettings: PropTypes.object.isRequired,
 	itemClickHandler: PropTypes.func.isRequired,
 	itemOpenCloseHandler: PropTypes.func,
 	useCustomItemContentRenderer: PropTypes.bool,
-
-	menuData: PropTypes.object.isRequired,
-	menuItemSettings: PropTypes.object.isRequired,
-
 	style: PropTypes.object,
+	renderCustomMenuItem: PropTypes.func
 };
 
 export default TreeMenu;

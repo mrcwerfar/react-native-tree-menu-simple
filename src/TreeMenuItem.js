@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {TouchableHighlight, View, Text} from 'react-native';
-import TreeMenuCustomItemContent from './TreeMenuCustomItemContent';
 
 /**
  * react-tree-screen-menu item
@@ -41,7 +40,12 @@ class TreeMenuItem extends Component {
 
 	renderItemContent(menuItemObject) {
 		if (this.props.useCustomItemContentRenderer && this.props.useCustomItemContentRenderer===true) {
-			return (<TreeMenuCustomItemContent menuItemObject={menuItemObject}></TreeMenuCustomItemContent>);
+			if (this.props.renderCustomMenuItem) {
+				let customView = this.props.renderCustomMenuItem(menuItemObject);
+				return customView;
+			} else {
+				return (<View><Text>Missing renderCustomMenuItem() method ...</Text></View>);
+			}
 		} else {
 			return (
 				<View>
@@ -184,6 +188,7 @@ TreeMenuItem.propTypes = {
 	menuItemSettings: PropTypes.object.isRequired,
 	onOpenSubMenu: PropTypes.func,
 	useCustomItemContentRenderer: PropTypes.bool,
+	renderCustomMenuItem: PropTypes.func
 };
 
 export default TreeMenuItem;
