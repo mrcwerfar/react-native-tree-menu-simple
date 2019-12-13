@@ -60,14 +60,30 @@ class TreeMenuItem extends Component {
 	}
 
 	renderIcon(unicodeChar, fontSize, color, itemShowIcon, iconSize) {
+		console.log(fontSize);
+		console.log(iconSize);
 		if (itemShowIcon)
 			return (
-				<Text style={{width: iconSize, color:color, fontSize: fontSize, marginLeft: 2, marginRight: 2}}>{unicodeChar}</Text>
+				<View style={{width: iconSize+iconSize*0.3, marginLeft: 0, marginRight: 0}}>
+					<Text style={{color:color, fontSize: fontSize, alignSelf:'center'}}>{unicodeChar}</Text>
+				</View>
 			);
 		else
 			return (<View/>);
 	}
 
+	renderDropDown(menuItemObject, iconIndex, itemTextFontSize, itemOpenCloseIconColor, itemShowIcon, iconSize) {
+		return (
+			<View style={{width: iconSize + iconSize*0.3}}>
+				<TouchableHighlight
+					onPress={() => { this.props.onOpenSubMenu(menuItemObject); }}
+					activeOpacity={0.5}
+					underlayColor="#00000000">
+					{this.renderIcon(this.dropDownIconNames[iconIndex], itemTextFontSize, itemOpenCloseIconColor, itemShowIcon, iconSize)}
+				</TouchableHighlight>
+			</View>
+		);
+	}
 	renderItem(menuItemObject) {
 		let defaultIcon = this.props.menuItemSettings.defaultIcon?this.props.menuItemSettings.defaultIcon:'\u25A3';
 		let iconIndex = menuItemObject.openSubMenu === true ? 1 : 0;
@@ -79,10 +95,10 @@ class TreeMenuItem extends Component {
 		let itemTextFontSize = 22;
 		if (this.props.menuItemSettings.itemTextStyle)
 			itemTextFontSize = this.props.menuItemSettings.itemTextStyle.fontSize ? this.props.menuItemSettings.itemTextStyle.fontSize : 22;
-		let iconSize = this.props.menuItemSettings.itemIconSize ? this.props.menuItemSettings.itemIconSize : itemTextFontSize;
+		let iconSize = itemTextFontSize; //this.props.menuItemSettings.itemIconSize ? this.props.menuItemSettings.itemIconSize : itemTextFontSize;
 
 		let dropDownIconSize = itemTextFontSize;
-		let menuItemIconSize = itemTextFontSize * 0.6; //70% av fonstr.
+		let menuItemIconSize = itemTextFontSize * 1; //% av fonstr.
 		let itemShowIcon = this.props.menuItemSettings.itemShowIcon || this.props.menuItemSettings.itemShowIcon === false ? this.props.menuItemSettings.itemShowIcon:true;
 
 		return (
@@ -113,13 +129,7 @@ class TreeMenuItem extends Component {
 
 						{/* Show DROPDOWN BUTTON or not on LEFT side? */}
 						{this.props.showDropDownButton && this.dropDownIconNames && this.dropDownIconNames.length === 2 && this.props.menuItemSettings.itemOpenCloseIcon === 'left' && (
-							<TouchableHighlight
-								style={{alignItems: 'center'}}
-								onPress={() => { this.props.onOpenSubMenu(menuItemObject); }}
-								activeOpacity={0.5}
-								underlayColor="#00000000">
-								{this.renderIcon(this.dropDownIconNames[iconIndex], itemTextFontSize, itemOpenCloseIconColor, true, iconSize)}
-							</TouchableHighlight>
+							this.renderDropDown(menuItemObject, iconIndex, itemTextFontSize, itemOpenCloseIconColor, true, iconSize)
 						)}
 
 						{/* Show menu item Icon or not? */}
@@ -141,14 +151,7 @@ class TreeMenuItem extends Component {
 
 						{/* Show DROPDOWN BUTTON or not on RIGHT side? */}
 						{this.props.showDropDownButton && this.dropDownIconNames && this.dropDownIconNames.length === 2 && this.props.menuItemSettings.itemOpenCloseIcon === 'right' && (
-							<TouchableHighlight
-								style={{alignItems: 'center'}}
-								onPress={() => { this.props.onOpenSubMenu(menuItemObject); }}
-								activeOpacity={0.5}
-								underlayColor="#00000000">
-								{this.renderIcon(this.dropDownIconNames[iconIndex], dropDownIconSize, itemOpenCloseIconColor, true, iconSize)}
-								{/* this.selectIconFamily(this.dropDownIconNames[iconIndex], itemOpenCloseIconColor)*/}
-							</TouchableHighlight>
+							this.renderDropDown(menuItemObject, iconIndex, dropDownIconSize, itemOpenCloseIconColor, true, iconSize)
 						)}
 
 					</View>
