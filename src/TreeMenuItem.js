@@ -95,10 +95,10 @@ class TreeMenuItem extends Component {
 		let itemTextFontSize = 22;
 		if (this.props.menuItemSettings.itemTextStyle)
 			itemTextFontSize = this.props.menuItemSettings.itemTextStyle.fontSize ? this.props.menuItemSettings.itemTextStyle.fontSize : 22;
-		let iconSize = itemTextFontSize; //this.props.menuItemSettings.itemIconSize ? this.props.menuItemSettings.itemIconSize : itemTextFontSize;
+		let iconSize = this.props.menuItemSettings.itemIconSize ? this.props.menuItemSettings.itemIconSize : itemTextFontSize;
 
-		let dropDownIconSize = itemTextFontSize;
-		let menuItemIconSize = itemTextFontSize * 1; //% av fonstr.
+		let dropDownIconSize = iconSize;
+		let menuItemIconSize = iconSize * 1; //% av fonstr.
 		let itemShowIcon = this.props.menuItemSettings.itemShowIcon || this.props.menuItemSettings.itemShowIcon === false ? this.props.menuItemSettings.itemShowIcon:true;
 
 		return (
