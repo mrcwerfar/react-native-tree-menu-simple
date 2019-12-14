@@ -228,14 +228,16 @@ You can customize each item using and parameters.
 ##Settings
 ###TreeView properties
 
-Property | Values | Meaning | Example
--------- | ------ | ------- | -------
-menuData | a menu data object  |  | {menuData}
-menuItemSettings | a menu settings object |  | {menuItemSettings}
-itemClickHandler | a function  |  | {item => this.onMenuItemClick(item)}
-useCustomItemContentRenderer | true or false |  | 
+Property | Value | Description | Example
+-------- | ------ | ------- | -------------
+menuData | a menu data object  | A Javascript object | {menuData}
+menuItemSettings | a menu settings object |  A Javascript object | {menuItemSettings}
+itemClickHandler | a function  | A callback event function | {item => this.onMenuItemClick(item)}
+useCustomItemContentRenderer | true or false | Use customized menu items or not. Works in conjuction with renderCustomMenuItem below | 
 renderCustomMenuItem | a function |  | renderCustomMenuItem={menuItemObject => this.renderCustomMenuItem(menuItemObject) }
 
 ###Menu data
+See example above.
 
 ###Menu settings
+See example above.
