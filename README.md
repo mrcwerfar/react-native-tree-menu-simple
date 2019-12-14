@@ -1,4 +1,4 @@
 # react-native-tree-menu
-A simple and flexible screen menu for react-native apps.
+## A simple and flexible screen menu for react-native apps.
 
-Documentation is on its way ...
+_Documentation is on its way ..._
