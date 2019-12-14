@@ -1,7 +1,7 @@
 {
   "name": "react-native-tree-menu-simple",
-  "version": "1.0.0",
-  "description": "A demo component",
+  "version": "1.0.2",
+  "description": "A simple and flexible screen menu for react-native applications.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,7 +15,13 @@
     "android",
     "ios",
     "menu",
-    "tree"
+    "screen menu",
+    "tree",
+    "react-component",
+    "react",
+    "hierarchy",
+    "hierarchical menu",
+    "tree menu"
   ],
   "author": "Werner Farstad",
   "license": "MIT",
