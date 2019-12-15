@@ -329,3 +329,37 @@ itemIndentValue | Indent value. Indicates indent value for each submenu level. D
 The menu used in combination with https://github.com/oblador/react-native-vector-icons
 Each menu item use different vector icons.
 ![screen1](./images/screen3.png)
+
+```javascript
+. . .
+renderCustomMenuItem(menuItemObject) {
+  let viewStyle = {flex: 1, flexDirection: 'row', alignItems: 'center'};
+  let iconSize = 80;
+  let iconStyle = {marginLeft: 5, marginRight: 5, width: iconSize}
+  let color = '#900EFF';
+  let textStyle = {fontSize: 22, color: color};
+  switch (menuItemObject.id) {
+    case 'id_new_session':
+      return (<View style={[viewStyle]}><Icon style={[iconStyle]} color={color} name={'ios-create'} size={iconSize}/><Text style={[textStyle]}>{menuItemObject.name}</Text></View>);
+    case 'id_activity':
+      return (<View style={[viewStyle]}><Icon style={[iconStyle]} color={color} name={'md-pulse'} size={iconSize}/><Text style={[textStyle]}>{menuItemObject.name}</Text></View>);
+    case 'id_activity_find_program':
+      return (<View style={[viewStyle]}><Icon style={[iconStyle]} color={color} name={'md-search'} size={iconSize}/><Text style={[textStyle]}>{menuItemObject.name}</Text></View>);
+    case 'id_activity_select_program':
+      return (<View style={[viewStyle]}><Icon style={[iconStyle]} color={color} name={'md-checkmark'} size={iconSize}/><Text style={[textStyle]}>{menuItemObject.name}</Text></View>);
+    case 'id_activity_select_program1':
+      return (<View style={[viewStyle]}><Icon style={[iconStyle]} color={color} name={'md-bicycle'} size={iconSize}/><Text style={[textStyle]}>{menuItemObject.name}</Text></View>);
+    case 'id_activity_select_program2':
+      return (<View style={[viewStyle]}><Icon style={[iconStyle]} color={color} name={'md-body'} size={iconSize}/><Text style={[textStyle]}>{menuItemObject.name}</Text></View>);
+    case 'id_activity_select_program3':
+      return (<View style={[viewStyle]}><Icon style={[iconStyle]} color={color} name={'md-walk'} size={iconSize}/><Text style={[textStyle]}>{menuItemObject.name}</Text></View>);
+    case 'id_programs':
+      return (<View style={[viewStyle]}><Icon style={[iconStyle]} color={color} name={'ios-list'} size={iconSize}/><Text style={[textStyle]}>{menuItemObject.name}</Text></View>);
+    case 'id_exercises':
+      return (<View style={[viewStyle]}><Icon style={[iconStyle]} color={color} name={'ios-heart-empty'} size={iconSize}/><Text style={[textStyle]}>{menuItemObject.name}</Text></View>);
+    default:
+      return (<View style={[viewStyle]}><Icon style={[iconStyle]} color={color} name={'ios-color-wand'} size={iconSize}/><Text style={[textStyle]}>{menuItemObject.name}</Text></View>);
+  }
+}
+. . .
+```
