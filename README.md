@@ -289,13 +289,13 @@ Overview of useful unicode symbols could be found here [Wikibooks](https://en.wi
 
 Property | Description 
 -------- | -------------
-closeOthersOnOpen | If true, other menu items at the same level are closed when the current is opened. Default true.
+closeOthersOnOpen | If true, other menu items at the same level are closed when the current is opened. Default is true.
 defaultIcon | Unicode value. This is used when there is no "icon" specified for the menu items in menuData (json). 
 itemOpenCloseIcon | Where to place the open/close icon. Allowed values: 'left' or 'right'. Default is 'right'.
 itemTextStyle | Standard react/jsx style object.
 itemStyle | Standard react/jsx style object.
 itemShowIcon | Show left menu icon or not. Default is true.
-itemIconSize | Icon size. Default 22.
+itemIconSize | Icon size. Default is 22.
 itemIconColor | Icon color. Default is '#AAA'.
 itemOpenCloseIconColor | Color on the open/close icons. Default is '#000'.
 iconStyle | Standard react/jsx style object.
