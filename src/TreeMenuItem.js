@@ -85,7 +85,7 @@ class TreeMenuItem extends Component {
 		);
 	}
 	renderItem(menuItemObject) {
-		let defaultIcon = this.props.menuItemSettings.defaultIcon?this.props.menuItemSettings.defaultIcon:'\u25A3';
+		let defaultIcon = this.props.menuItemSettings.defaultIcon?this.props.menuItemSettings.defaultIcon:'\u2022';
 		let iconIndex = menuItemObject.openSubMenu === true ? 1 : 0;
 		let indentValue = this.props.menuItemSettings.itemIndentValue||this.props.menuItemSettings.itemIndentValue===0?this.props.menuItemSettings.itemIndentValue:35;
 

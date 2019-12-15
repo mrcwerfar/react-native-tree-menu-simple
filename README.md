@@ -49,16 +49,16 @@ class App extends Component {
         // Generic menu item settings:
         let menuItemSettings = {
             closeOthersOnOpen: true,
-            defaultIcon: '\u25AA',
+            defaultIcon: '\u2022',
             itemOpenCloseIcon: 'right',
             itemTextStyle: {
                 fontSize: 22,
-                color: '#000000',
+                color: '#ffffff',
                 textAlign: 'left',
                 marginLeft: 0,
             },
             itemStyle: {
-                backgroundColor: '#E0E0FF',
+                backgroundColor: '#596be0',
                 marginBottom: 0,
                 marginTop: 0,
                 marginLeft: 4,
@@ -66,9 +66,9 @@ class App extends Component {
                 borderRadius: 3,
             },
             itemShowIcon: true,
-            itemIconSize: 46,
-            itemIconColor: '#AAA',
-            itemOpenCloseIconColor: '#000',
+            itemIconSize: 60,
+            itemIconColor: '#FFFFFF',
+            itemOpenCloseIconColor: '#ffffff',
             iconStyle: {},
             itemSeparator: true,
             itemSeparatorColor: '#A0A0A0',
@@ -98,35 +98,34 @@ class App extends Component {
   [
     {
       "id": "id_new_session",
-      "icon": "\u2795",
+      "icon": "\u002B",
       "name": "New Session",
       "subItems": [
         {
           "id": "id_new_session_find_program",
-          "icon": "\u25AA",
           "name": "Find program",
           "subItems": []
         },
         {
           "id": "id_new_session_select_program",
-          "icon": "\u25AA",
+          "icon": "\u2022",
           "name": "Select program",
           "subItems": [
             {
               "id": "id_new_session_select_program1",
-              "icon": "\u25AA",
+              "icon": "\u2022",
               "name": "Bicycling",
               "subItems": []
             },
             {
               "id": "id_new_session_select_program2",
-              "icon": "\u25AA",
+              "icon": "\u2022",
               "name": "Body workout",
               "subItems": []
             },
             {
               "id": "id_new_session_select_program3",
-              "icon": "\u25AA",
+              "icon": "\u2022",
               "name": "Hiking",
               "subItems": []
             }
@@ -136,35 +135,35 @@ class App extends Component {
     },
     {
       "id": "id_activity",
-      "icon": "\u26F9",
+      "icon": "\u261E",
       "name": "My activity",
       "subItems": [
         {
           "id": "id_activity_find_program",
-          "icon": "\u25AA",
+          "icon": "\u2022",
           "name": "Find program to display",
           "subItems": []
         },
         {
           "id": "id_activity_select_program",
-          "icon": "\u25AA",
+          "icon": "\u2022",
           "name": "Select program",
           "subItems": [
             {
               "id": "id_activity_select_program1",
-              "icon": "\u25AA",
+              "icon": "\u2022",
               "name": "Bicycling",
               "subItems": []
             },
             {
               "id": "id_activity_select_program2",
-              "icon": "\u25AA",
+              "icon": "\u2022",
               "name": "Body Workout",
               "subItems": []
             },
             {
               "id": "id_activity_select_program3",
-              "icon": "\u25AA",
+              "icon": "\u2022",
               "name": "Hiking",
               "subItems": []
             }
@@ -179,25 +178,25 @@ class App extends Component {
       "subItems": [
         {
           "id": "id_programs_select_program1",
-          "icon": "\u25AA",
+          "icon": "\u2022",
           "name": "Bicycling",
           "subItems": []
         },
         {
           "id": "id_programs_select_program2",
-          "icon": "\u25AA",
+          "icon": "\u2022",
           "name": "Body workout",
           "subItems": []
         },
         {
           "id": "id_programs_select_program3",
-          "icon": "\u25AA",
+          "icon": "\u2022",
           "name": "Hiking",
           "subItems": []
         },
         {
           "id": "id_programs_add",
-          "icon": "\u25AA",
+          "icon": "\u2022",
           "name": "Add new program",
           "subItems": []
         }
@@ -205,12 +204,12 @@ class App extends Component {
     },
     {
       "id": "id_exercises",
-      "icon": "\u26BD",
+      "icon": "\u2042",
       "name": "Exercises",
       "subItems": [
         {
           "id": "id_exercises_add",
-          "icon": "\u25AA",
+          "icon": "\u2022",
           "name": "Add new exercise",
           "subItems": []
         }
@@ -218,7 +217,6 @@ class App extends Component {
     }
   ]
 }
-
 ```
 The result i shown above.
 
@@ -328,6 +326,7 @@ itemIndentValue | Indent value. Indicates indent value for each submenu level. D
 
 The menu used in combination with https://github.com/oblador/react-native-vector-icons
 Each menu item use different vector icons.
+In this example the following menuItemSettings properties are set as follows: itemShowIcon is set to false, itemStyle:backgroundColor and itemOpenCloseIconColor is set to "#e0c437". In addition openMenuItemIcon and closeMenuItemIcon is set to "\u2190" and "\u2193" in the menuData-object (.json file).
 ![screen1](./images/screen3.png)
 
 ```javascript
