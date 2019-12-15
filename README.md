@@ -287,6 +287,7 @@ Overview of useful unicode symbols could be found here [Wikibooks](https://en.wi
           "id": "id_new_session_find_program",
           "icon": "\u25AA",
           "name": "Find program",
+          "showDropDownButton": true,
           "subItems": [
           	... etc. 
           ]
@@ -322,3 +323,9 @@ itemSeparatorMarginBottom | Separator line bottom margin. Default is 1.
 itemSeparatorMarginLeft | Separator line left margin. Default is 4.
 itemSeparatorMarginRight | Separator line right margin. Default is 4.
 itemIndentValue | Indent value. Indicates indent value for each submenu level. Default is 20.
+
+##Example with customRenderer and vector-icons
+
+The menu used in combination with https://github.com/oblador/react-native-vector-icons
+Each menu item use different vector icons.
+![screen1](./images/screen3.png)
