@@ -1,7 +1,7 @@
 # react-native-tree-menu-simple
 ### A simple and flexible screen menu for react-native apps.
 
-The menu structure is defined with json code. The menu is styled with a setting object. Se example below. Use unicode symbols as menu icons. Alternatively customize menu items using whatever icon or image you like. 
+The menu structure is defined separately as a json file. The menu is styled with a setting object. By default unicode symbols are used as menu icons. Alternatively customize menu items using whatever icon or image you like. 
 
 No dependencies required.
 
@@ -223,7 +223,22 @@ class App extends Component {
 The result i shown above.
 
 ##Custom menu items
-You can customize each item using and parameters.
+You can customize each item using useCustomItemContentRenderer and renderCustomMenuItem.
+
+```javascript
+<TreeMenu
+    menuData={menuData}
+    menuItemSettings={menuItemSettings}
+    itemClickHandler={item => this.onMenuItemClick(item)}
+    useCustomItemContentRenderer={true}
+    renderCustomMenuItem={menuItemObject =>
+      this.renderCustomMenuItem(menuItemObject)
+    }
+/>
+```
+
+The renderCustomMenuItem() function will be called for each item for custom rendering.
+
 ![screen1](./images/screen2.png)
 ##Settings
 ###TreeView properties
@@ -237,7 +252,57 @@ useCustomItemContentRenderer | true or false | Use customized menu items or not.
 renderCustomMenuItem | a function |  | renderCustomMenuItem={menuItemObject => this.renderCustomMenuItem(menuItemObject) }
 
 ###Menu data
-See example above.
+This is a Javscript object, specified in code or in a separate .json file (as shown above). Notice the unicode symbols used as both menu item icons and open/close menu item icons.
+Overview of useful unicode symbols could be fond here [Wikibooks](https://en.wikibooks.org/wiki/Unicode/List_of_useful_symbols#Health_and_safety) 
+
+####Required structure (as json):
+```javascript
+{
+  "openMenuItemIcon": "\u25C0",
+  "closeMenuItemIcon": "\u25BC",
+  "menu":
+  [
+    {
+      "id": "id_new_session",
+      "icon": "\u2795",
+      "name": "New Session",
+      "subItems": [
+        {
+          "id": "id_new_session_find_program",
+          "icon": "\u25AA",
+          "name": "Find program",
+          "subItems": [
+          	... etc. 
+          ]
+        },
+        ... etc.
+      ]
+    },
+    {
+      ...
+    }
+  ]
+}  
+```
 
 ###Menu settings
-See example above.
+
+Property | Description 
+-------- | -------------
+closeOthersOnOpen | If true, other menu items at the same level are closed when the current is opened. Default true.
+defaultIcon | Unicode value. This is used when there is no "icon" specified for the menu items in menuData (json). 
+itemOpenCloseIcon | Where to place the open/close icon. Allowed values: 'left' or 'right'. Default is 'right'.
+itemTextStyle | Standard react/jsx style object.
+itemStyle | Standard react/jsx style object.
+itemShowIcon | Show left menu icon or not. Default is true.
+itemIconSize | Icon size. Default 22.
+itemIconColor | Icon color. Default is '#AAA'.
+itemOpenCloseIconColor | Color on the open/close icons. Default is '#000'.
+iconStyle | Standard react/jsx style object.
+itemSeparator | Show separator line between menu items. Default is true.
+itemSeparatorColor | Color on the separator line between menu items. Default is '#A0A0A0'.
+itemSeparatorMarginTop | Separator line top margin. Default is 1.
+itemSeparatorMarginBottom | Separator line bottom margin. Default is 1.
+itemSeparatorMarginLeft | Separator line left margin. Default is 4.
+itemSeparatorMarginRight | Separator line right margin. Default is 4.
+itemIndentValue | Indent value. Indicates indent value for each submenu level. Default is 20.
