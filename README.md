@@ -6,10 +6,10 @@ The menu structure is defined separately as a json file. The menu is styled with
 No dependencies required.
 
 ## TOC
-* Installation
-* Use
-* Custom menu items
-* Settings
+- [Installation](#installation)
+- [Use](#use)
+- [Custom menu items](#custom-menu-items)
+- [Settings](#settings)
 
 ![screen1](./images/screen1.png)
 
@@ -253,7 +253,7 @@ renderCustomMenuItem | a function |  | renderCustomMenuItem={menuItemObject => t
 
 ### Menu data
 This is a Javscript object, specified in code or in a separate .json file (as shown above). Notice the unicode symbols used as both menu item icons and open/close menu item icons.
-Overview of useful unicode symbols could be fond here [Wikibooks](https://en.wikibooks.org/wiki/Unicode/List_of_useful_symbols#Health_and_safety) 
+Overview of useful unicode symbols could be found here [Wikibooks](https://en.wikibooks.org/wiki/Unicode/List_of_useful_symbols#Health_and_safety) 
 
 #### Required structure (as json):
 ```javascript
