@@ -238,6 +238,22 @@ You can customize each item using useCustomItemContentRenderer and renderCustomM
 ```
 
 The renderCustomMenuItem() function will be called for each item for custom rendering.
+```javascript
+  renderCustomMenuItem(menuItemObject) {
+    switch (menuItemObject.id) {
+      case 'id_new_session':
+        return (<View>. . . </View>);
+      case 'id_activity':
+        return (<View>. . . </View>);
+      case 'id_programs':
+        return (<View>. . . </View>);
+      case 'id_exercises':
+        return (<View>. . . </View>);
+      default:
+      	return (<View>. . . </View>);
+    }
+  }
+```
 
 ![screen1](./images/screen2.png)
 ## Settings
