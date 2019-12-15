@@ -5,7 +5,7 @@ The menu structure is defined separately as a json file. The menu is styled with
 
 No dependencies required.
 
-##TOC
+## TOC
 * Installation
 * Use
 * Custom menu items
@@ -13,9 +13,9 @@ No dependencies required.
 
 ![screen1](./images/screen1.png)
 
-##Installation
+## Installation
 npm install react-native-tree-menu-simple --save
-##Use
+## Use
 Example use:
 ```javascript
 
@@ -89,7 +89,7 @@ class App extends Component {
     }
 }
 ```
-###The exercisemenu.json file looks like this:
+### The exercisemenu.json file looks like this:
 ```json5
 {
   "openMenuItemIcon": "\u25C0",
@@ -222,7 +222,7 @@ class App extends Component {
 ```
 The result i shown above.
 
-##Custom menu items
+## Custom menu items
 You can customize each item using useCustomItemContentRenderer and renderCustomMenuItem.
 
 ```javascript
@@ -240,8 +240,8 @@ You can customize each item using useCustomItemContentRenderer and renderCustomM
 The renderCustomMenuItem() function will be called for each item for custom rendering.
 
 ![screen1](./images/screen2.png)
-##Settings
-###TreeView properties
+## Settings
+### TreeView properties
 
 Property | Value | Description | Example
 -------- | ------ | ------- | -------------
@@ -251,11 +251,11 @@ itemClickHandler | a function  | A callback event function | {item => this.onMen
 useCustomItemContentRenderer | true or false | Use customized menu items or not. Works in conjuction with renderCustomMenuItem below | 
 renderCustomMenuItem | a function |  | renderCustomMenuItem={menuItemObject => this.renderCustomMenuItem(menuItemObject) }
 
-###Menu data
+### Menu data
 This is a Javscript object, specified in code or in a separate .json file (as shown above). Notice the unicode symbols used as both menu item icons and open/close menu item icons.
 Overview of useful unicode symbols could be fond here [Wikibooks](https://en.wikibooks.org/wiki/Unicode/List_of_useful_symbols#Health_and_safety) 
 
-####Required structure (as json):
+#### Required structure (as json):
 ```javascript
 {
   "openMenuItemIcon": "\u25C0",
@@ -285,7 +285,7 @@ Overview of useful unicode symbols could be fond here [Wikibooks](https://en.wik
 }  
 ```
 
-###Menu settings
+### Menu settings
 
 Property | Description 
 -------- | -------------
