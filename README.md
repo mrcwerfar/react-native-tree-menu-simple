@@ -10,7 +10,7 @@ No dependencies required.
 - [Use](#use)
 - [Custom menu items](#custom-menu-items)
 - [Settings](#settings)
-
+- [Example with customRenderer and vector-icons](#Example-with-customRenderer-and-vector-icons)
 ![screen1](./images/screen1.png)
 
 ## Installation
