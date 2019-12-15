@@ -229,7 +229,7 @@ You can customize each item using useCustomItemContentRenderer and renderCustomM
 <TreeMenu
     menuData={menuData}
     menuItemSettings={menuItemSettings}
-    itemClickHandler={item => this.onMenuItemClick(item)}
+    itemClickHandler={menuItemObject => this.onMenuItemClick(menuItemObject)}
     useCustomItemContentRenderer={true}
     renderCustomMenuItem={menuItemObject =>
       this.renderCustomMenuItem(menuItemObject)
