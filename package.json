@@ -1,6 +1,6 @@
 {
   "name": "react-native-tree-menu-simple",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "A simple and flexible screen menu for react-native applications.",
   "main": "index.js",
   "scripts": {
