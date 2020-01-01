@@ -3,8 +3,6 @@
 
 The menu structure is defined as a Javascript-object in code or in a separate .json file. The menu is styled with a settings object. By default unicode symbols are used as icons for the menu items and for the open/close icons. Alternatively menu items may be customised using whatever icon or image required. 
 
-No dependencies required.
-
 ## TOC
 - [Installation](#installation)
 - [Use](#use)
@@ -14,7 +12,7 @@ No dependencies required.
 ![screen1](./images/screen1.png)
 
 ## Installation
-npm install react-native-tree-menu-simple --save
+npm install react-native-tree-menu-simple
 ## Use
 Example use:
 ```javascript
