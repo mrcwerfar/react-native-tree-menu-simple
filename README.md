@@ -1,7 +1,7 @@
 # react-native-tree-menu-simple
 ### A simple and flexible screen menu for react-native apps.
 
-The menu structure is defined as a Javascript-object in code or in a separate .json file. The menu is styled with a settings object. By default unicode symbols are used as icons for the menu items and for the open/close icons. Alternatively menu items may be customised using whatever icon or image required. 
+The menu structure is defined as a Javascript object in code or in a separate json file. The menu is styled with a settings object. By default unicode symbols are used as icons for the menu items and for the open/close icons. Alternatively menu items may be customised using whatever icon or image required. 
 
 ## TOC
 - [Installation](#installation)
@@ -88,8 +88,8 @@ class App extends Component {
     }
 }
 ```
-```json5
 ### The exercisemenu.json file:
+```json5
 {
   "openMenuItemIcon": "\u25C0",
   "closeMenuItemIcon": "\u25BC",
