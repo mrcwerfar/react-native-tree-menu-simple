@@ -8,7 +8,8 @@ The menu structure is defined as a Javascript-object in code or in a separate .j
 - [Use](#use)
 - [Custom menu items](#custom-menu-items)
 - [Settings](#settings)
-- [Example with customRenderer and vector-icons](#Example-with-customRenderer-and-vector-icons)
+- [Example with customRenderer and react-native-vector-icons](#example-with-customrenderer-and-react-native-vector-icons)
+
 ![screen1](./images/screen1.png)
 
 ## Installation
@@ -87,8 +88,8 @@ class App extends Component {
     }
 }
 ```
-### The exercisemenu.json file looks like this:
 ```json5
+### The exercisemenu.json file:
 {
   "openMenuItemIcon": "\u25C0",
   "closeMenuItemIcon": "\u25BC",
@@ -265,7 +266,7 @@ renderCustomMenuItem | a function |  | renderCustomMenuItem={menuItemObject => t
 
 ### Menu data
 This is a Javscript object, specified in code or in a separate .json file (as shown above). Notice the unicode symbols used as both menu item icons and open/close menu item icons.
-Overview of useful unicode symbols could be found here [Wikibooks](https://en.wikibooks.org/wiki/Unicode/List_of_useful_symbols#Health_and_safety) 
+Useful unicode symbols could, for instance, be found here [Wikibooks](https://en.wikibooks.org/wiki/Unicode/List_of_useful_symbols#Health_and_safety) or [jrgraphix.net](https://jrgraphix.net/r/Unicode/2600-26FF) or similar. 
 
 #### Required structure (as json):
 ```javascript
@@ -320,7 +321,7 @@ itemSeparatorMarginLeft | Separator line left margin. Default is 4.
 itemSeparatorMarginRight | Separator line right margin. Default is 4.
 itemIndentValue | Indent value. Indicates indent value for each submenu level. Default is 20.
 
-##Example with customRenderer and vector-icons
+##Example with customRenderer and react-native-vector-icons
 
 The menu used in combination with https://github.com/oblador/react-native-vector-icons
 Each menu item use different vector icons.
