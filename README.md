@@ -323,7 +323,7 @@ itemIndentValue | Indent value. Indicates indent value for each submenu level. D
 
 ##Example with customRenderer and react-native-vector-icons
 
-The menu used in combination with https://github.com/oblador/react-native-vector-icons
+The menu used in combination with https://www.npmjs.com/package/react-native-vector-icons
 Each menu item use different vector icons.
 In this example the following menuItemSettings properties are set as follows: itemShowIcon is set to false, itemStyle:backgroundColor and itemOpenCloseIconColor is set to "#e0c437". In addition openMenuItemIcon and closeMenuItemIcon is set to "\u2190" and "\u2193" in the menuData-object (.json file).
 ![screen1](./images/screen3.png)

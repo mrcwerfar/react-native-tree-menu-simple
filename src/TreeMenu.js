@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import TreeMenuItem from './TreeMenuItem';
 
 /**
- * react-tree-screen-menu
+ * TreeMenu: react-native-tree-menu-simple
  */
 class TreeMenu extends Component {
 	constructor(props, context) {

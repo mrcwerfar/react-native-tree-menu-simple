@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {TouchableHighlight, View, Text} from 'react-native';
 
 /**
- * react-tree-screen-menu item
+ * TreeMenuItem: react-native-tree-menu-simple
  */
 class TreeMenuItem extends Component {
 	constructor(props, context) {
@@ -84,6 +84,7 @@ class TreeMenuItem extends Component {
 			</View>
 		);
 	}
+
 	renderItem(menuItemObject) {
 		let defaultIcon = this.props.menuItemSettings.defaultIcon?this.props.menuItemSettings.defaultIcon:'\u2022';
 		let iconIndex = menuItemObject.openSubMenu === true ? 1 : 0;
