@@ -3,7 +3,7 @@
 
 The menu structure is defined as a Javascript object in code or in a separate json file. The menu is styled with a settings object. By default unicode symbols are used as icons for the menu items and for the open/close icons. Alternatively menu items may be customised using whatever icon or image required. 
 
-## TOC
+## Table of Contents
 - [Installation](#installation)
 - [Use](#use)
 - [Custom menu items](#custom-menu-items)
