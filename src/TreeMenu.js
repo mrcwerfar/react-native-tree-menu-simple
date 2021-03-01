@@ -81,7 +81,6 @@ class TreeMenu extends Component {
 						if (!this.props.itemClickHandler)
 							console.log('TreeMenu: Error: missing itemClickHandler property');
 						else {
-							console.log(menuItemObject.name);
 							this.props.itemClickHandler(menuItemObject);
 						}
 					};

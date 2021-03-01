@@ -60,8 +60,6 @@ class TreeMenuItem extends Component {
 	}
 
 	renderIcon(unicodeChar, fontSize, color, itemShowIcon, iconSize) {
-		console.log(fontSize);
-		console.log(iconSize);
 		if (itemShowIcon)
 			return (
 				<View style={{width: iconSize+iconSize*0.3, marginLeft: 0, marginRight: 0}}>
